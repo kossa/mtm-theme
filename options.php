@@ -93,6 +93,25 @@ function optionsframework_options() {
 		'type' => 'text');
 
 
+	$options[] = array(
+		'name' => __('Student Gallery Title', 'options_check'),
+		'id' => 'student_gallery_title',
+		'std' => 'Student Gallery',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Student Gallery Button Text', 'options_check'),
+		'id' => 'student_gallery_button_text',
+		'std' => 'see more',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Student Gallery Button Link', 'options_check'),
+		'id' => 'student_gallery_button_link',
+		'std' => '#',
+		'type' => 'text');
+
+
 
 	//require_once("options-example.php");
 	

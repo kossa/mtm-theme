@@ -1,5 +1,5 @@
 
-<?php $query = GetPosts('top-ten'); ?>
+<?php $query = GetPosts('top-ten', ['posts_per_page' => 6]); ?>
 
 <section class="top-ten">
   <div class="container">
