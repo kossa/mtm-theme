@@ -112,6 +112,24 @@ function optionsframework_options() {
 		'type' => 'text');
 
 
+	$options[] = array(
+		'name' => __('The MTM Value Title', 'options_check'),
+		'id' => 'mtm_value_title',
+		'std' => 'The MTM Value',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('The MTM Value SubTitle', 'options_check'),
+		'id' => 'mtm_value_sub_title',
+		'std' => 'Meet the Masters',
+		'type' => 'text');
+
+
+	$options[] = array(
+		'name' => __('Other Art Programs Title', 'options_check'),
+		'id' => 'other_art_programs_title',
+		'std' => 'Other Art Programs',
+		'type' => 'text');
 
 	//require_once("options-example.php");
 	
