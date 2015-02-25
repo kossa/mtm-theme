@@ -21,7 +21,7 @@
       </div>
       <div class="col-sm-3 other-art">
 
-<?php $query = GetPosts('art-programs', ['posts_per_page' => 4, 'order' => 'ASC']); ?>
+      <?php $query = GetPosts('art-programs', ['posts_per_page' => 4, 'order' => 'ASC']); ?>
         <h3><?php echo getOption('other_art_programs_title') ?></h3>
         <ul class="list-unstyled">
           <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>

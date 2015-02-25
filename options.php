@@ -71,7 +71,7 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Sections', 'options_check'),
+		'name' => __('Home Sections', 'options_check'),
 		'type' => 'heading');
 
 	$options[] = array(
@@ -129,6 +129,42 @@ function optionsframework_options() {
 		'name' => __('Other Art Programs Title', 'options_check'),
 		'id' => 'other_art_programs_title',
 		'std' => 'Other Art Programs',
+		'type' => 'text');
+
+
+	$options[] = array(
+		'name' => __('Map section - Title', 'options_check'),
+		'id' => 'map_title',
+		'std' => 'Loved by over 1,000 schools —100% Satisfied',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Map section - content', 'options_check'),
+		'id' => 'map_content',
+		'std' => 'Nullam sagittis a turpis vel bibendum. Aenean lobortis purus justo, at sagittis ligula molestie vitae. Pellentesque non turpis fermentum, accumsan diam in, mollis lacus. Donec rutrum facilisis lectus, vitae suscipit augue fermentum et. Vestibulum ullamcorper est non varius faucibus. ',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Map section - button text', 'options_check'),
+		'id' => 'map_button_text',
+		'std' => 'Learn more',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Map section - button link', 'options_check'),
+		'id' => 'map_button_link',
+		'std' => '#',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Map section - Image', 'options_check'),
+		'id' => 'map_img',
+		'type' => "upload");
+
+	$options[] = array(
+		'name' => __('Map section - Image link', 'options_check'),
+		'id' => 'map_img_link',
+		'std' => '#',
 		'type' => 'text');
 
 	//require_once("options-example.php");
