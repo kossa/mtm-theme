@@ -34,16 +34,22 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>Historical, Culturally Diverse, Standards-Based Art Lessons to Inspire Young Artists</p>
+            <p><?php echo getOption('site_tagline') ?></p>
           </div>
           <div class="col-sm-6 menu">
             <ul class="list-inline">
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Student Gallery</a></li>
-              <li class="social"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-              <li class="social"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-              <li class="social"><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+              <?php if (getOption('facebook_url')): ?>
+                <li class="social"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+              <?php endif ?>
+              <?php if (getOption('twitter_url')): ?>
+                <li class="social"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+              <?php endif ?>
+              <?php if (getOption('pinterest_url')): ?>
+                <li class="social"><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+              <?php endif ?>
               <li>
                 <form class="search" action="#">
                   <input type="submit" name="" value="">
@@ -59,9 +65,9 @@
     <section class="navbar " role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img src="/wp-content/uploads/2015/02/logo.png" alt=""></a>
+          <a class="navbar-brand" href="<?php echo bloginfo( 'url' ); ?>"><img src="<?php echo getOption('logo_url') ?>" alt=""></a>
         </div>
-        <div class="contact-us"><i class="fa fa-phone"></i> Call Us Today! <strong>(949) 215-1064</strong></div>
+        <div class="contact-us"><i class="fa fa-phone"></i> Call Us Today! <strong><?php echo getOption('phone_number') ?></strong></div>
         <div class="clearfix"></div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -83,7 +89,16 @@
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Student Gallery</a></li>
-              <li class="social"><a href="#"><i class="fa fa-facebook-square"></i></a><a href="#"><i class="fa fa-twitter-square"></i></a><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+              <li class="social">
+              <?php if (getOption('facebook_url')): ?>
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+              <?php endif ?>
+              <?php if (getOption('twitter_url')): ?>
+                <a href="#"><i class="fa fa-twitter-square"></i></a>
+              <?php endif ?>
+              <?php if (getOption('pinterest_url')): ?>
+                <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+              <?php endif ?>
               <li>
                 <form class="search" action="#">
                   <input type="submit" name="" value="">
