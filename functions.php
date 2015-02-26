@@ -23,23 +23,40 @@ add_action( 'init', 'mtm_register_theme_menu' );
 */
 function mtm_widgets_init() {
 
-        // Home-page: Bienvenu
+        // Footer
         register_sidebar( array(
-                'name'          => __( 'HomePage : Bienvenu', 'mtm' ),
-                'id'            => 'home-bienvenue',
-                'description'   => __( 'Le message Bienvenue sur la page d\'accueil.', 'mtm' ),
-                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</aside>',
+                'name'          => __( 'Footer widget area 1', 'mtm' ),
+                'id'            => 'footer-01',
+                'before_widget' => '',
+                'after_widget'  => '',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>' 
+        ) );
+        register_sidebar( array(
+                'name'          => __( 'Footer widget area 2', 'mtm' ),
+                'id'            => 'footer-02',
+                'before_widget' => '',
+                'after_widget'  => '',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>' 
+        ) );
+        register_sidebar( array(
+                'name'          => __( 'Footer widget area 3', 'mtm' ),
+                'id'            => 'footer-03',
+                'before_widget' => '',
+                'after_widget'  => '',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>' 
+        ) );
+        register_sidebar( array(
+                'name'          => __( 'Footer widget area 4', 'mtm' ),
+                'id'            => 'footer-04',
+                'before_widget' => '',
+                'after_widget'  => '',
+                'before_title'  => '<h3>',
+                'after_title'   => '</h3>' 
         ) );
 
-        // What We Do: Bienvenu
-        register_sidebar( array(
-                'name'          => __( 'what-we-do : what-think', 'mtm' ),
-                'id'            => 'what-think',
-                'description'   => __( 'what-think position', 'mtm' ),
-                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</aside>',
-        ) );
         
 }
 add_action( 'widgets_init', 'mtm_widgets_init' );
