@@ -16,8 +16,8 @@
           </div>
         </div>
 
-        <p><small>Copyright © 2015 Meet the Masters. All Rights Reserved. Website by Raindrop Marketing.</small></p>
-        <a href="#" class="sitemap">Sitemap</a>
+        <p><small><?php echo getOption('footer_copyright'); ?></small></p>
+        <a href="<?php echo get_page_link( 60 ); ?>" class="sitemap">Sitemap</a>
       </div>
     </footer>
 
