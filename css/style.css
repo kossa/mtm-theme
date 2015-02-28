@@ -155,7 +155,7 @@ section.submenu a:hover{padding-left: 10px;color: #ee3f3f;}
 
 
 /*get-pricing*/
-section.get-pricing>div{font-weight: bold;font-size: 16px;position: relative; -webkit-box-shadow: 0 -2px 5px rgba(0,0,0,0.3); box-shadow: 0 -2px 5px rgba(0,0,0,0.3);color: #fff;background-color: #1573C2;text-align: center;padding: 30px;}
+section.get-pricing div.blue{font-weight: bold;font-size: 16px;position: relative; -webkit-box-shadow: 0 -2px 5px rgba(0,0,0,0.3); box-shadow: 0 -2px 5px rgba(0,0,0,0.3);color: #fff;background-color: #1573C2;text-align: center;padding: 30px;}
 section.get-pricing h1{margin: 0 0 20px;font-size: 30px;color: #ffcc00;}
 section.get-pricing p{margin-bottom: 20px;}
 section.get-pricing.yellow>div{background-color: #FFCC00;}
@@ -165,7 +165,7 @@ section.get-pricing.yellow p{color: #333;}
 
 /*static-page*/
 article#static-page{padding: 50px 20px;}
-article#static-page h1.page-title{color: #1573c2;font-size: 25px;margin: 0 0 30px;}
+article#static-page h1{color: #1573c2;font-size: 25px;margin: 0 0 30px;}
 article#static-page p{font-size: 16px;color: #000;padding-top: 10px;}
 
 
