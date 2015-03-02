@@ -1,3 +1,4 @@
+<?php $rand = GetPosts('artist') ?>
 <section class="save-all">
     <div class="container">
         <div class="row">
@@ -11,57 +12,20 @@
         
         <div class="list_carousel responsive">
             <ul id="foo1" class="list-inline">
-                <li>
-                    <a href="#"><img src="img/art-02.png" alt="">
-                        Van Gogh <small>2nd grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-03.png" alt="">
-                        Picasso <small>4th grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-04.png" alt="">
-                        Kahlo <small>3rd grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-05.png" alt="">
-                        Van Gogh <small>2nd grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-06.png" alt="">
-                        Picasso <small>4th grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-02.png" alt="">
-                        Van Gogh <small>2nd grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-03.png" alt="">
-                        Picasso <small>4th grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-04.png" alt="">
-                        Kahlo <small>3rd grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-05.png" alt="">
-                        Van Gogh <small>2nd grader</small>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"><img src="img/art-06.png" alt="">
-                        Picasso <small>4th grader</small>
-                    </a>
-                </li>
-
+                <?php if ( $rand->have_posts() ) : while ( $rand->have_posts() ) : $rand->the_post(); ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>">
+                            <img src="<?php echo getImgLink('artist_cover_photo') ?>" alt="">
+                            <?php the_title(); ?> 
+                            <small><?php echo getField('country') ?> (<?php echo getField('date') ?>)</small>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
+                <!-- post navigation -->
+                <?php else: ?>
+                <!-- no posts found -->
+                <?php endif; ?> ?>
+                
             </ul>
             <div class="clearfix"></div>
         </div>

@@ -191,6 +191,8 @@ section.get-pricing-form h3{margin: 0 0 30px;color: #1573c2;font-size: 28px;font
 section.get-pricing-form .form-group{text-align: left;min-height: 34px;}
 section.get-pricing-form label{font-weight: normal;}
 section.get-pricing-form .radio-inline {margin-left: 20px;display: inline-block;}
+section.get-pricing-form .radios br{display: none;}
+section.get-pricing-form .wpcf7-list-item-label{font-family: 'Lato', sans-serif;margin-right: 20px; margin-left: -7px;}
 section.get-pricing-form textarea{height: 130px;}
 section.get-pricing-form p{margin: 20px 0;font-style: italic;}
 

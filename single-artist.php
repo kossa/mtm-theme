@@ -16,7 +16,11 @@
                     <div class="about-artist">
                         <div class="text-center"><img src="<?php echo getImgLink('artist_photo') ?>" alt=""></div>
                         <h4>About the Artist</h4>
-                        <p><?php echo getField('artist_bio') ?></p>
+                        <p>
+                            <strong><?php the_title(); ?></strong>
+                            (<?php echo getField('date') ?>) <br>
+                            <?php echo getField('artist_bio') ?> 
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-9">

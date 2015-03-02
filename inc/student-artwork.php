@@ -1,3 +1,4 @@
+<?php $artworks = GetPosts('student-artwork', ['posts_per_page' => 4]) ?>
 <div class="container">
     <div class="p50-0">
         <div class="row">
@@ -13,18 +14,23 @@
                             
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img src="img/artwork-01.jpg" alt="">
-                                    <p>5th Grade Class</p>
+                            <?php if ( $artworks->have_posts() ) : $i = 0; $indicator=''; while ( $artworks->have_posts() ) : $artworks->the_post(); ?>
+                                <?php 
+                                $indicator .= '
+                                    <li data-target="#slide-artwork" data-slide-to="'.$i.'" >
+                                        <img src="'. getImgLink('thumbnail') .'" alt="">
+                                    </li>';
+                                ?>
+                                <div class="item <?php echo ($i==0)? 'active' : '' ?>">
+                                    <img src="<?php echo getImgLink('image') ?>" alt="">
+                                    <p><?php the_title(); ?></p>
                                 </div>
-                                <div class="item">
-                                    <img src="img/artwork-01.jpg" alt="">
-                                    <p>3th Grade Class</p>
-                                </div>
-                                <div class="item">
-                                    <img src="img/artwork-01.jpg" alt="">
-                                    <p>2th Grade Class</p>
-                                </div>
+                            <?php $i++; endwhile; ?>
+                            <!-- post navigation -->
+                            <?php else: ?>
+                            <!-- no posts found -->
+                            <?php endif; ?>
+                                
                             </div>
 
                         </div>
@@ -32,29 +38,14 @@
                     <div class="col-sm-2" id="">
                         <!-- Indicators -->
                             <ol class="carousel-indicators">
-                                <li data-target="#slide-artwork" data-slide-to="0" class="active">
-                                    <img src="img/img-17.jpg" alt="">
-                                </li>
-                                <li data-target="#slide-artwork" data-slide-to="1">
-                                    <img src="img/img-18.jpg" alt="">
-                                </li>
-                                <li data-target="#slide-artwork" data-slide-to="2">
-                                    <img src="img/img-19.jpg" alt="">
-                                </li>
+                                <?php echo $indicator; ?>
                             </ol>
                     </div>
                 </div>
             </section>
         </div>
         <div class="col-sm-4">
-            <section class="get-pricing">
-                <img src="img/img-07.png" alt="">
-                <div>
-                    <h1>Get Pricing</h1>
-                    <p>Maecenas ac ligula tellus. Suspendisse odio nisl, consectetur quis iaculis sed, tempor vel ligula. In tincidunt tortor quam, a faucibus metus porta a.</p>
-                    <a href="#" class="btn btn-danger">Get Started</a>
-                </div>
-            </section>
+            <?php dynamic_sidebar( 'widget-artist' ); ?>
         </div>
     </div>
     </div>

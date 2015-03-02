@@ -37,6 +37,8 @@ function optionsframework_options() {
 
 	require_once(dirname(__FILE__)."/theme-options/home-sections.php");
 
+	require_once(dirname(__FILE__)."/theme-options/selling.php");
+
 	require_once(dirname(__FILE__)."/theme-options/footer.php");
 
 
