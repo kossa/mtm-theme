@@ -51,7 +51,7 @@ get_header(); ?>
 			<div class="container">
 			  <div class="row">
 				<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-				  <?php echo do_shortcode('[contact-form-7 id="87" title="Selling form"]'); ?>
+				  <?php echo do_shortcode('[salesforce form="1"]'); ?>
 				</div>
 			  </div>
 			</div>
