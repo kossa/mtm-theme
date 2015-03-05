@@ -11,10 +11,11 @@ session_start();
 
 
 // Add Navigation menu
-function mtm_register_theme_menu() {
-        register_nav_menu( 'primary', 'Main Navigation Menu' );
+function mtm_register_menus() {
+        register_nav_menu( 'primary', 'Top Menu' );
 }
-add_action( 'init', 'mtm_register_theme_menu' );
+add_action( 'init', 'mtm_register_menus' );
+
 
 /*
 |------------------------------------------------------------------------------------
@@ -80,6 +81,18 @@ function mtm_widgets_init() {
 }
 add_action( 'widgets_init', 'mtm_widgets_init' );
 
+/*
+|------------------------------------------------------------------------------------
+| Menu Active Class
+|------------------------------------------------------------------------------------
+*/
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
 /*
 |------------------------------------------------------------------------------------
 | Add support Thumblnails

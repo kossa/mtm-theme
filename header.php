@@ -38,17 +38,21 @@
           </div>
           <div class="col-sm-6 menu">
             <ul class="list-inline">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Student Gallery</a></li>
+
+              <?php wp_nav_menu( [
+                  'menu'       => 'Top Menu',
+                  'container'  => '',
+                  'items_wrap' => '%3$s'
+                ]); ?>
+
               <?php if (getOption('facebook_url')): ?>
-                <li class="social"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                <li class="social"><a href="<?php echo getOption('facebook_url') ?>"><i class="fa fa-facebook-square"></i></a></li>
               <?php endif ?>
               <?php if (getOption('twitter_url')): ?>
-                <li class="social"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                <li class="social"><a href="<?php echo getOption('twitter_url') ?>"><i class="fa fa-twitter-square"></i></a></li>
               <?php endif ?>
               <?php if (getOption('pinterest_url')): ?>
-                <li class="social"><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+                <li class="social"><a href="<?php echo getOption('pinterest_url') ?>"><i class="fa fa-pinterest-square"></i></a></li>
               <?php endif ?>
               <li>
                 <form class="search" action="#">
@@ -76,28 +80,28 @@
             <span class="icon-bar"></span>
           </button>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About <span class="caret"></span></a></li>
-            <li><a href="#">How it Works <span class="caret"></span></a></li>
-            <li><a href="#">Artist Units</a></li>
-            <li><a href="#">Common Core <span class="caret"></span></a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li class="pricing"><a href="#">Get Pricing</a></li>
-          </ul>
+          <?php 
+            wp_nav_menu( array(
+              'primary'    => 'nav-menu',
+              'container'  => '',
+              'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
+            ));
+           ?>
           <ul class="list-unstyled menu-top visible-xs">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Student Gallery</a></li>
+              <?php wp_nav_menu( [
+                  'menu'       => 'Top Menu',
+                  'container'  => '',
+                  'items_wrap' => '%3$s'
+                ]); ?>
               <li class="social">
               <?php if (getOption('facebook_url')): ?>
-                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="<?php echo getOption('facebook_url') ?>"><i class="fa fa-facebook-square"></i></a>
               <?php endif ?>
               <?php if (getOption('twitter_url')): ?>
-                <a href="#"><i class="fa fa-twitter-square"></i></a>
+                <a href="<?php echo getOption('twitter_url') ?>"><i class="fa fa-twitter-square"></i></a>
               <?php endif ?>
               <?php if (getOption('pinterest_url')): ?>
-                <a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+                <a href="<?php echo getOption('pinterest_url') ?>"><i class="fa fa-pinterest-square"></i></a></li>
               <?php endif ?>
               <li>
                 <form class="search" action="#">
