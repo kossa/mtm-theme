@@ -243,10 +243,13 @@ section.archives a:after{display: none;}
 .the-news{padding: 0 40px 20px;}
 .the-news article{margin-bottom: 30px;border-bottom: 1px solid #999;padding-bottom: 30px;}
 .the-news article:last-of-type{border-bottom-style: none;}
-.the-news article a.btn{font-size: 11px;padding: 3px 10px;font-weight: bold;}
+.the-news article a.btn{font-size: 11px;padding: 3px 10px;font-weight: bold;margin-top: 10px;}
+.the-news article .gallery{display: none;}
 
 
 /*Pagination*/
+.pagination>li>span{color: #777;cursor: default;font-weight: bold;}
+.pagination>li>span.pages, .pagination>li>span.current{  cursor: not-allowed;}
 .pagination>li>a{color: #EE3F3F;font-weight: bold;}
 
 /*artist-page*/
