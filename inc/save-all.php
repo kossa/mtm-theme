@@ -1,4 +1,22 @@
-<?php $rand = GetPosts('artist') ?>
+<?php 
+
+$current_track = getField('track'); // Get current track
+
+$rand = GetPosts('artist', [
+    'posts_per_page' => 20,
+    'orderby'        => 'rand',
+    'post__not_in' => [get_the_id()],
+    'meta_key' => 'track',
+    'meta_query' => [
+        [
+           'key' => 'track',
+           'value' => $current_track,
+           'compare' => '=',
+        ]
+    ]
+]) 
+
+?>
 <section class="save-all">
     <div class="container">
         <div class="row">
@@ -17,7 +35,7 @@
                         <a href="<?php the_permalink(); ?>">
                             <img src="<?php echo getImgLink('artist_cover_photo') ?>" alt="">
                             <?php the_title(); ?> 
-                            <small><?php echo getField('country') ?> (<?php echo getField('date') ?>)</small>
+                            <small><?php echo getField('heritage') ?> (<?php echo getField('date') ?>)</small>
                         </a>
                     </li>
                 <?php endwhile; ?>
