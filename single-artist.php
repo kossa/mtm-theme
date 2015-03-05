@@ -40,8 +40,8 @@
                             </div>
                             <div class="col-xs-6 col-md-3">
                                 <div class="info">
-                                    <p class="small"><i class="fa fa-globe"></i> country</p>
-                                    <p><?php echo getField('country') ?></p>
+                                    <p class="small"><i class="fa fa-globe"></i> HERITAGE</p>
+                                    <p><?php echo getField('heritage') ?></p>
                                 </div>
                             </div>
                             <div class="col-xs-6 col-md-3">

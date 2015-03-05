@@ -191,20 +191,26 @@ function getOption($name, $default = false) {
 
 /*
 |------------------------------------------------------------------------------------
-| Cherif get Post type
+| Get all Values of key
 |------------------------------------------------------------------------------------
 */
-function GetCPT($cpt='')
+function GetValuesMeta($key='')
 {
     global $wpdb;
     $sql = "
             SELECT * 
-            FROM $wpdb->posts p 
-            LEFT JOIN {$wpdb->prefix}postmeta m ON p.ID=m.post_id  
-            WHERE p.post_type = 'slide'
+            FROM $wpdb->postmeta p 
+            WHERE p.meta_key = '$key'
         ";
 
-    return $wpdb->get_results($sql);
+
+    $result = []; 
+    foreach ($wpdb->get_results($sql) as $index => $key) {
+        array_push($result, $key->meta_value);
+        //var_dump($key);
+    }
+
+    return $result;
 
 }
 
