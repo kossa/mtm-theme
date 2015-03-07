@@ -66,7 +66,7 @@
       </div>
     </section><!-- top-menu -->
 
-    <section class="navbar " role="navigation">
+    <nav class="navbar " role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="<?php echo bloginfo( 'url' ); ?>"><img src="<?php echo getOption('logo_url') ?>" alt=""></a>
@@ -81,11 +81,20 @@
           </button>
         <div class="collapse navbar-collapse">
           <?php 
+            // wp_nav_menu( array(
+            //   'primary'    => 'nav-menu',
+            //   'container'  => '',
+            //   'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
+            // ));
+
             wp_nav_menu( array(
               'primary'    => 'nav-menu',
-              'container'  => '',
+              'depth' => 2,
+              'menu_class' => 'nav',
               'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
-            ));
+              //Process nav menu using our custom nav walker
+              'walker' => new wp_bootstrap_navwalker())
+            );
            ?>
           <ul class="list-unstyled menu-top visible-xs">
               <?php wp_nav_menu( [
@@ -112,4 +121,4 @@
             </ul>
         </div><!--/.nav-collapse -->
       </div>
-    </section><!-- navbar -->
+    </nav><!-- navbar -->
