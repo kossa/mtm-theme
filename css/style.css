@@ -154,6 +154,15 @@ section.submenu a:after{content: "";font: normal normal normal 13px/1 FontAwe
 section.submenu .active a{color: #ee3f3f;}
 section.submenu a:hover{padding-left: 10px;color: #ee3f3f;}
 
+section.submenu ul.menu{padding: 0;}
+section.submenu .menu-item{display: none;}
+section.submenu .current_page_ancestor{display: block}
+section.submenu .current_page_ancestor>a{  font-family: 'Permanent Marker', cursive; margin: 0 0 5px; color: #1573c2; font-size: 25px; padding-bottom: 10px; border-bottom: 2px dotted #9F9F9F;}
+section.submenu .current_page_ancestor>a:after{display: none;}
+section.submenu .current_page_ancestor ul{padding: 0;}
+section.submenu .current_page_ancestor .menu-item{display: block}
+section.submenu .current_page_ancestor .menu-item a{color: #000;}
+section.submenu .current_page_ancestor .menu-item.active a{color: #EE3F3F;}
 
 /*get-pricing*/
 section.get-pricing div.blue{font-weight: bold;font-size: 16px;position: relative; -webkit-box-shadow: 0 -2px 5px rgba(0,0,0,0.3); box-shadow: 0 -2px 5px rgba(0,0,0,0.3);color: #fff;background-color: #1573C2;text-align: center;padding: 30px;}

@@ -1,4 +1,5 @@
-<?php $artworks = GetPosts('student-artwork', ['posts_per_page' => 4]) ?>
+<?php $artworks = GetPosts('student-artwork') ?>
+<?php $id_artist = get_the_id(); ?>
 <div class="container">
     <div class="p50-0">
         <div class="row">
@@ -14,18 +15,25 @@
                             
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
-                            <?php if ( $artworks->have_posts() ) : $i = 0; $indicator=''; while ( $artworks->have_posts() ) : $artworks->the_post(); ?>
-                                <?php 
-                                $indicator .= '
-                                    <li data-target="#slide-artwork" data-slide-to="'.$i.'" >
-                                        <img src="'. getImgLink('thumbnail') .'" alt="">
-                                    </li>';
-                                ?>
-                                <div class="item <?php echo ($i==0)? 'active' : '' ?>">
-                                    <img src="<?php echo getImgLink('image') ?>" alt="">
-                                    <p><?php the_title(); ?></p>
-                                </div>
-                            <?php $i++; endwhile; ?>
+                            <?php if ( $artworks->have_posts() ) : 
+                                $i = 0;
+                                $indicator='';
+                                while ( $artworks->have_posts() ) :
+                                    $artworks->the_post();
+                                    if ( getField('the_artist') == $id_artist) :
+                                        $indicator .= '
+                                        <li data-target="#slide-artwork" data-slide-to="'.$i.'" >
+                                            <img src="'. getImgLink('thumbnail') .'" alt="">
+                                        </li>';
+                                        ?>
+                                        <div class="item <?php echo ($i==0)? 'active' : '' ?>">
+                                            <img src="<?php echo getImgLink('image') ?>" alt="">
+                                            <p><?php the_title(); ?></p>
+                                        </div>
+                                <?php        
+                                    endif;
+                                    $i++; 
+                                endwhile; ?>
                             <!-- post navigation -->
                             <?php else: ?>
                             <!-- no posts found -->

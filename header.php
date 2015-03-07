@@ -93,8 +93,8 @@
               'menu_class' => 'nav',
               'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
               //Process nav menu using our custom nav walker
-              'walker' => new wp_bootstrap_navwalker())
-            );
+              'walker' => new wp_bootstrap_navwalker()
+            ));
            ?>
           <ul class="list-unstyled menu-top visible-xs">
               <?php wp_nav_menu( [

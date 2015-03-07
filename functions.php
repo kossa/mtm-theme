@@ -162,7 +162,12 @@ function getFields($field = '')
 */
 function getField($field = '')
 { 
-    return array_pop(get_post_custom_values( $field ));
+    if (is_array(get_post_custom_values( $field ))) {
+        return array_pop(get_post_custom_values( $field ));
+    }else{
+        return null;
+    }
+
 }
 
 
@@ -214,6 +219,7 @@ function GetValuesMeta($key='')
             SELECT * 
             FROM $wpdb->postmeta p 
             WHERE p.meta_key = '$key'
+            Group BY meta_value
         ";
 
 
