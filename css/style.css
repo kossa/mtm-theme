@@ -56,8 +56,9 @@ section.navbar {padding-top: 10px;}
 .contact-us .fa{color: #FFCC00;}
 .navbar-collapse{float: right;padding: 0;}
 .navbar-nav>li>a{color: #0057b6;font-size: 17px;font-weight: bold;padding: 10px 20px;} 
-.navbar-nav>li.active>a, .nav>li>a:focus, .nav>li>a:hover{color: #ee3f3f;background-color: transparent;} 
+.navbar-nav>li.active>a, .nav>li>a:focus, .nav>li>a:hover, .navbar-nav>li.current_page_parent>a{color: #ee3f3f;background-color: transparent;} 
 .navbar-nav>li.pricing a{background-color: #FFCC00;border-radius: 30px}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{background-color: transparent;}
 
 
 /*Carousel*/
