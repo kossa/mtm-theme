@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <?php get_sidebar(); ?>
+                    <?php get_sidebar('blog'); ?>
                 </div>
                 <div class="col-sm-8">
                     <div class="wrapper the-news">
@@ -19,7 +19,7 @@
                         <article>
                             <header>
                                 <p class="date"><?php the_date(); ?></p>
-                                <a href="#" class="btn btn-danger share">Share Post +</a>
+                                <?php load_template( dirname(__FILE__) . '/inc/share-button.php' ); ?>
                             </header>
                             <h1 class="title-article"><?php the_title(); ?></h1>
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

@@ -153,6 +153,7 @@ section.submenu a{display: block;position: relative;color: #000;font-size: 15px;
 section.submenu a:after{content: "";font: normal normal normal 13px/1 FontAwesome;position: absolute;right: 0;top: 14px;color: #ee3f3f;}
 section.submenu .active a{color: #ee3f3f;}
 section.submenu a:hover{padding-left: 10px;color: #ee3f3f;}
+section.submenu ul{padding: 0;list-style: none;}
 
 section.submenu ul.menu{padding: 0;}
 section.submenu .menu-item{display: none;}
@@ -168,9 +169,9 @@ section.submenu .current_page_ancestor .menu-item.active a{color: #EE3F3F;}
 section.get-pricing div.blue{font-weight: bold;font-size: 16px;position: relative; -webkit-box-shadow: 0 -2px 5px rgba(0,0,0,0.3); box-shadow: 0 -2px 5px rgba(0,0,0,0.3);color: #fff;background-color: #1573C2;text-align: center;padding: 30px;}
 section.get-pricing h1{margin: 0 0 20px;font-size: 30px;color: #ffcc00;}
 section.get-pricing p{margin-bottom: 20px;}
-section.get-pricing.yellow>div{background-color: #FFCC00;}
-section.get-pricing.yellow h1{color: #177ed5;}
-section.get-pricing.yellow p{color: #333;}
+section.get-pricing div.yellow{background-color: #FFCC00;}
+section.get-pricing div.yellow h1{color: #177ed5;}
+section.get-pricing div.yellow p{color: #333;}
 
 
 /*static-page*/
@@ -250,10 +251,12 @@ section.archives a:after{display: none;}
 .the-news p.date{margin: 0;font-size: 12px;color: #666;}
 .the-news h4{margin: 0;}
 .the-news h4 a{display: inline-block;font-size: 18px;font-weight: bold;color: #0057b6;margin: 3px 0 10px;}
+.the-news img.wp-post-image{max-width: 100%!important; height: auto!important;}
 .the-news{padding: 0 40px 20px;}
 .the-news article{margin-bottom: 30px;border-bottom: 1px solid #999;padding-bottom: 30px;}
 .the-news article:last-of-type{border-bottom-style: none;}
-.the-news article a.btn{font-size: 11px;padding: 3px 10px;font-weight: bold;margin-top: 10px;}
+.the-news article a.btn{  width: 80px;font-size: 11px;padding: 3px 10px;font-weight: bold;margin-top: 10px;}
+.the-news article a.btn img{visibility: hidden; float: right;}
 .the-news article .gallery{display: none;}
 
 

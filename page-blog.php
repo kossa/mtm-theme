@@ -26,7 +26,7 @@ $wp_query = new WP_Query( $args );
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <?php get_sidebar(); ?>
+        <?php get_sidebar('blog'); ?>
       </div>
       <div class="col-sm-8">
         <div class="wrapper the-news">
