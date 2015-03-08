@@ -8,7 +8,7 @@ a{color: #ee3f3f;}
 a:hover{color: #ee3f3f;}
 a, input{-webkit-transition: all 0.3s;transition: all 0.3s;}
 a:hover, a:focus{text-decoration: none;}
-img, iframe{max-width: 100%}
+img, iframe{max-width: 100%; height: auto;}
 .red{color: #ee3f3f;}
 p{font-size: 15px;}
 .p50-0{padding: 50px 0;}
