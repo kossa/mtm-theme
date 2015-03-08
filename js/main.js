@@ -52,4 +52,12 @@
         });
     }
 
+    $('#audio_modal').on('show.bs.modal', function (e) {
+      $('#play_audio').get(0).play();
+    }) 
+
+    $('#audio_modal').on('hide.bs.modal', function (e) {
+      $('#play_audio').get(0).pause();
+    })   
+
 })(jQuery);

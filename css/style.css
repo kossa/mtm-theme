@@ -276,7 +276,7 @@ section.archives a:after{display: none;}
 #artist-page li{margin-bottom: 10px;}
 #artist-page dt{font-size: 18px;color: #177ed5;font-weight: bold;}
 #artist-page dd{}
-
+#audio_modal .modal-body{background-color: #000;}
 
 /*save-all*/
 section.save-all{background-color: #F6F6F6;padding-top: 30px;}
