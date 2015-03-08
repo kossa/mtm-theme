@@ -6,11 +6,11 @@
 get_header(); 
 
 // Get Selects box
-$tracks = GetValuesMeta('track');
-$styles = GetValuesMeta('style');
-$medias = GetValuesMeta('media');
-$heritages = GetValuesMeta('heritage');
-$genders = GetValuesMeta('gender');
+$tracks    = getTaxonomieFilter( 'tracks' );
+$styles    = getTaxonomieFilter( 'styles' );
+$medias    = getTaxonomieFilter( 'medias' );
+$heritages = getTaxonomieFilter( 'heritages' );
+$genders   = getTaxonomieFilter( 'genders' );
 
 $artists = GetPosts('artist');
 
@@ -95,16 +95,16 @@ $artists = GetPosts('artist');
 
                     <?php if ( $artists->have_posts() ) : while ( $artists->have_posts() ) : $artists->the_post(); ?>
                         <li 
-                            data-track    = "<?php echo strtolower(getField('track')) ?>" 
-                            data-style    = "<?php echo strtolower(getField('style')) ?>" 
-                            data-media    = "<?php echo strtolower(getField('media')) ?>" 
-                            data-heritage = "<?php echo strtolower(getField('heritage')) ?>" 
-                            data-gender   = "<?php echo strtolower(getField('gender')) ?>" 
+                            data-track    = "<?php echo strtolower(getTaxonomie('tracks')) ?>" 
+                            data-style    = "<?php echo strtolower(getTaxonomie('styles')) ?>" 
+                            data-media    = "<?php echo strtolower(getTaxonomie('medias')) ?>" 
+                            data-heritage = "<?php echo strtolower(getTaxonomie('heritages')) ?>" 
+                            data-gender   = "<?php echo strtolower(getTaxonomie('genders')) ?>" 
                         >
                             <a href="<?php the_permalink() ?>" class="one-artist">
                                 <img src="<?php echo getImgLink('artist_cover_photo') ?>" alt="">
                                 <h4><?php the_title(); ?></h4>
-                                <h5><?php echo getField('heritage') ?> (<?php echo getField('date') ?>)</h5>
+                                <h5><?php echo getTaxonomie('heritage') ?> (<?php echo getField('date') ?>)</h5>
                             </a>
                         </li>
                     <?php endwhile; ?>
@@ -132,7 +132,7 @@ $artists = GetPosts('artist');
                 var filter_value = $(this).val();
                 var filter_name = $(this).attr('name');
                 if (filter_value) {
-                    $('section.all-artists li[data-'+filter_name+'="'+filter_value+'"]').fadeIn();
+                    $('section.all-artists li[data-'+filter_name+'*="'+filter_value+'"]').fadeIn();
                     nb_filter++;
                 };
             });

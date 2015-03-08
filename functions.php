@@ -234,6 +234,29 @@ function getOption($name, $default = false) {
     }
 }
 
+/*
+|------------------------------------------------------------------------------------
+| get Taxonomie
+|------------------------------------------------------------------------------------
+*/
+function getTaxonomieFilter($value='')
+{
+    $tax = array();
+    $args = array(
+        'type'                     => 'artists',
+        'orderby'                  => 'name',
+        'hide_empty'               => 0,
+        'taxonomy'                 => $value,
+    ); 
+
+    $allcat = get_categories( $args );
+
+    foreach ($allcat as $onecat) {
+        array_push($tax, $onecat->name);
+    }
+    return $tax;
+}
+
 
 /*
 |------------------------------------------------------------------------------------
