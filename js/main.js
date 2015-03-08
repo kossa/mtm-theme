@@ -60,4 +60,11 @@
       $('#play_audio').get(0).pause();
     })   
 
+    // Hide sub-menu empty
+    nb = $('section.submenu.widget_nav_menu').find('.current_page_ancestor').length;;
+    console.log(nb);
+    if (!nb) {
+        $("section.submenu.widget_nav_menu").hide();
+    };
+
 })(jQuery);

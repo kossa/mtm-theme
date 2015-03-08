@@ -29,25 +29,25 @@
               <div class="col-xs-6 col-md-3">
                 <div class="info">
                   <p class="small"><i class="fa fa-folder"></i> style</p>
-                  <p><?php echo getField('style') ?></p>
+                  <p><?php echo getTaxonomie('styles') ?></p>
                 </div>
               </div>
               <div class="col-xs-6 col-md-3">
                 <div class="info">
                   <p class="small"><i class="fa fa-pencil"></i> Media</p>
-                  <p><?php echo getField('media') ?></p>
+                  <p><?php echo getTaxonomie('medias') ?></p>
                 </div>
               </div>
               <div class="col-xs-6 col-md-3">
                 <div class="info">
                   <p class="small"><i class="fa fa-globe"></i> HERITAGE</p>
-                  <p><?php echo getField('heritage') ?></p>
+                  <p><?php echo getTaxonomie('heritages') ?></p>
                 </div>
               </div>
               <div class="col-xs-6 col-md-3">
                 <div class="info">
                   <p class="small"><i class="fa fa-user"></i> gender</p>
-                  <p><?php echo getField('gender') ?></p>
+                  <p><?php echo getTaxonomie('genders') ?></p>
                 </div>
               </div>
             </div>
