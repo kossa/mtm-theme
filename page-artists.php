@@ -129,9 +129,10 @@ $artists = GetPosts('artist');
             // Show 
             var nb_filter = 0;
             $("#filter select").each(function(){
-                var filter = $(this).val();
-                if (filter) {
-                    $('section.all-artists li').fadeIn();
+                var filter_value = $(this).val();
+                var filter_name = $(this).attr('name');
+                if (filter_value) {
+                    $('section.all-artists li[data-'+filter_name+'="'+filter_value+'"]').fadeIn();
                     nb_filter++;
                 };
             });
