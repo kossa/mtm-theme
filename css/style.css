@@ -108,7 +108,7 @@ section.mtm-value .meet-masters li .fa{color: #FFC11C;display: block;font-size: 
 section.mtm-value .meet-masters li:nth-of-type(2n) a{background-color: #0A6BBE;}
 section.mtm-value .meet-masters li:nth-of-type(2n) a .fa{color: #EE3F3F;}
 
-section.mtm-value .other-art{padding-top: 85px;overflow: hidden;}
+section.mtm-value .other-art{padding-top: 135px;overflow: hidden;}
 section.mtm-value .other-art h3{color: #525252;font-weight: bold;font-size: 24px;}
 section.mtm-value .other-art li a{display: block;background-color: #808080;color: #fff;font-weight: bold;font-size: 15px;padding: 30px;}
 section.mtm-value .other-art li:nth-of-type(2n) a{background-color: #949494;}
@@ -140,7 +140,7 @@ footer#footer p{float: left;margin-top: 40px;color: #a7c3db;}
 
 
 /*banner*/
-section.banner{text-align: center;padding: 40px 0;color: #fff;background: url(../img/bg-static-banner.png) no-repeat center center; background-size: cover;}
+section.banner{text-align: center;padding: 60px 0;color: #fff;background: url(../img/bg-static-banner.png) no-repeat center center; background-size: cover;}
 
 /*Aside*/
 aside{padding-top: 50px;}
@@ -207,6 +207,7 @@ section.get-pricing-form .wpcf7-list-item-label{font-family: 'Lato', sans-serif;
 section.get-pricing-form textarea{height: 130px;}
 section.get-pricing-form p{margin: 20px 0;font-style: italic;}
 section.get-pricing-form .sf_type_checkbox{margin-left: 20px;}
+section.get-pricing-form form .btn{padding: 9px 35px;}
 
 
 /*artists-page*/
