@@ -1,5 +1,6 @@
 <?php $artworks = GetPosts('student-artwork') ?>
-<?php $id_artist = get_the_id(); ?>
+<?php $id_artist = THE_ID ?>
+
 <div class="container">
     <div class="p50-0">
         <div class="row">
@@ -20,10 +21,11 @@
                                 $indicator='';
                                 while ( $artworks->have_posts() ) :
                                     $artworks->the_post();
+
                                     if ( getField('the_artist') == $id_artist) :
                                         $indicator .= '
                                         <li data-target="#slide-artwork" data-slide-to="'.$i.'" >
-                                            <img src="'. getImgLink('thumbnail') .'" alt="">
+                                            <img src="'. getImgLink('image', 'thumbnail') .'" alt="">
                                         </li>';
                                         ?>
                                         <div class="item <?php echo ($i==0)? 'active' : '' ?>">
@@ -31,8 +33,8 @@
                                             <p><?php the_title(); ?></p>
                                         </div>
                                 <?php        
+                                        $i++; 
                                     endif;
-                                    $i++; 
                                 endwhile; ?>
                             <!-- post navigation -->
                             <?php else: ?>

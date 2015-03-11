@@ -285,7 +285,7 @@ section.save-all h1{font-size: 28px;color: #177ed5;}
 section.save-all .learn-more{float: right;margin-top: 40px;}
 section.save-all .list_carousel{margin: 40px 0;}
 section.save-all #foo1 a{color: #000;text-align: center;display: block;font-weight: bold;}
-section.save-all #foo1 img{display: block;margin: 10px auto 20px;}
+section.save-all #foo1 img{display: block;margin: 10px auto 20px;width: 150px;}
 section.save-all #foo1 a small{font-size: 12px;font-style: italic;display: block;font-weight: normal;}
 
 /*student-artwork*/

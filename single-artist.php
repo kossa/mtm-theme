@@ -1,7 +1,10 @@
 <?php get_header() ?>
 
 
+
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php define("THE_ID", get_the_id()); ?>
+
   <section class="banner">
     <div class="container">
       <h1><?php the_title(); ?></h1>

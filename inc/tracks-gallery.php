@@ -1,11 +1,11 @@
 <?php 
 
 $current_track = getTaxonomie('tracks'); // Get current track
-
+wp_reset_query();
 $rand = GetPosts('artist', [
     'posts_per_page' => 20,
     'orderby'        => 'rand',
-    'post__not_in' => [get_the_id()],
+    'post__not_in' => [THE_ID],
 ]) 
 
 ?>

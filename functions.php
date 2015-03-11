@@ -204,9 +204,9 @@ function getTaxonomie($name='')
 | Get Field as an image
 |------------------------------------------------------------------------------------
 */
-function getImgLink($field='')
+function getImgLink($field='',$size='full')
 {
-    return array_shift(wp_get_attachment_image_src(getField( $field ), 'full'));
+    return array_shift(wp_get_attachment_image_src(getField( $field ), $size));
 }
 
 
