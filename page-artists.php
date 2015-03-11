@@ -123,7 +123,28 @@ $artists = GetPosts('artist');
     (function($){
     
         $("#filter select").change(function(){
+
             // Hide all
+            $('section.all-artists li').hide();
+
+            // Get Values
+            var _this = $(this);
+            var filter_value = _this.val();
+            var filter_name = _this.attr('name');
+
+            // Show the right Artists
+            if (filter_value) {
+                $('section.all-artists li[data-'+filter_name+'*="'+filter_value+'"]').fadeIn();
+            };
+
+            // Reset all other selects
+            $("#filter select").each(function(){
+                if ($(this).attr('name') != filter_name) {
+                    $(this).prop('selectedIndex',0);
+                };
+            });
+
+            /*// Hide all
             $('section.all-artists li').hide();
 
             // Show 
@@ -139,7 +160,7 @@ $artists = GetPosts('artist');
 
             if (!nb_filter) {
                 $('section.all-artists li').fadeIn();
-            };
+            };*/
 
         });
 

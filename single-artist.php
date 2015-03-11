@@ -96,7 +96,7 @@
 <?php endif; ?>
 
 
-<?php load_template( dirname(__FILE__) . '/inc/save-all.php' ); ?>
+<?php load_template( dirname(__FILE__) . '/inc/tracks-gallery.php' ); ?>
 
 <?php load_template( dirname(__FILE__) . '/inc/student-artwork.php' ); ?>
 
