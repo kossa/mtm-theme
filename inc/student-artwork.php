@@ -31,7 +31,9 @@
                                         </li>';
                                         ?>
                                         <div class="item <?php echo ($i==0)? 'active' : '' ?>">
-                                            <img src="<?php echo $image['url']; ?>" alt="">
+                                            <div class="big-img">
+                                                <img src="<?php echo $image['url']; ?>" alt="">
+                                            </div>
                                             <p><?php echo $image['caption']; ?></p>
                                         </div>
                                     

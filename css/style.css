@@ -304,6 +304,7 @@ section.student-artwork header h1{font-size: 28px;color: #177ed5;float: left;mar
 section.student-artwork header a{float: right;}
 
 section.student-artwork #slide-artwork .item img{width: 100%;}
+section.student-artwork #slide-artwork .big-img{  height: 470px; overflow: hidden;}
 section.student-artwork #slide-artwork .item p{text-align: right;}
 section.student-artwork .carousel-indicators{position: static;float: right;width: 100%;}
 section.student-artwork .carousel-indicators li{text-indent: 0;position: static;display: block;border: none;margin-bottom: 10px;width: 100%;height: auto;}
