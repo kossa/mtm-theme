@@ -1,7 +1,7 @@
 (function($){
 
-    $('#slide-artwork').carousel({
-      interval: 0
+    $('.carousel').carousel({
+      interval: 10000
     })
 
     window.onload = function(){

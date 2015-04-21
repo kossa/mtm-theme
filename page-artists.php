@@ -12,7 +12,7 @@ $medias    = getTaxonomieFilter( 'medias' );
 $heritages = getTaxonomieFilter( 'heritages' );
 $genders   = getTaxonomieFilter( 'genders' );
 
-$artists = GetPosts('artist');
+$artists = GetPosts('artist', ['orderby' => 'title', 'order' => 'ASC']);
 
  ?>
 

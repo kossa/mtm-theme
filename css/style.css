@@ -8,12 +8,21 @@ a{color: #ee3f3f;}
 a:hover{color: #ee3f3f;}
 a, input{-webkit-transition: all 0.3s;transition: all 0.3s;}
 a:hover, a:focus{text-decoration: none;}
-img, iframe{max-width: 100%; height: auto;}
+img{max-width: 100%; height: auto;}
+iframe{max-width: 100%}
 .red{color: #ee3f3f;}
 p{font-size: 15px;}
 .p50-0{padding: 50px 0;}
 /*Headers*/
 h1,h2 {font-family: 'Permanent Marker', cursive;}
+
+.alignright{float: right;}
+.alignleft{float: left;}
+.p10{padding: 10px;}
+.p20{padding: 20px;}
+.p30{padding: 30px;}
+.p40{padding: 40px;}
+
 
 /*BTN*/
 .btn{max-width: 100%;word-wrap: break-word;border: none;padding: 7px 18px;text-transform: uppercase;color: #fff;font-weight: bold;font-family: 'Permanent Marker', cursive;border-radius: 20px}

@@ -25,7 +25,7 @@
         <h3><?php echo getOption('other_art_programs_title') ?></h3>
         <ul class="list-unstyled">
           <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-          <li><a href="#"><?php the_title(); ?></a></li>
+          <li><a><?php the_title(); ?></a></li>
           <?php endwhile; ?>
           <!-- post navigation -->
           <?php else: ?>

@@ -1,5 +1,5 @@
-<?php $artworks = GetPosts('student-artwork') ?>
 <?php $id_artist = THE_ID ?>
+<?php $artworks = GetPosts('artist', ['p' => $id_artist] ) ?>
 
 <div class="container">
     <div class="p50-0">
@@ -8,7 +8,7 @@
             <section class="student-artwork">
                 <header>
                     <h1>Student Artwork</h1>
-                    <a href="#" class="learn-more">Go to the Student Gallery ›</a>
+                    <a href="<?php echo get_page_link(2746); ?>" class="learn-more">Go to the Student Gallery ›</a>
                 </header>
                 <div class="row">
                     <div class="col-sm-10">
@@ -22,19 +22,23 @@
                                 while ( $artworks->have_posts() ) :
                                     $artworks->the_post();
 
-                                    if ( getField('the_artist') == $id_artist) :
+                                    
+                                    foreach (get_field('sudent_gellery') as $image) {
+                                        
                                         $indicator .= '
                                         <li data-target="#slide-artwork" data-slide-to="'.$i.'" >
-                                            <img src="'. getImgLink('image', 'thumbnail') .'" alt="">
+                                            <img src="'. $image['sizes']['thumbnail'] .'" alt="">
                                         </li>';
                                         ?>
                                         <div class="item <?php echo ($i==0)? 'active' : '' ?>">
-                                            <img src="<?php echo getImgLink('image') ?>" alt="">
-                                            <p><?php the_title(); ?></p>
+                                            <img src="<?php echo $image['url']; ?>" alt="">
+                                            <p><?php echo $image['caption']; ?></p>
                                         </div>
-                                <?php        
+                                    
+                                    <?php        
                                         $i++; 
-                                    endif;
+                                    }
+
                                 endwhile; ?>
                             <!-- post navigation -->
                             <?php else: ?>

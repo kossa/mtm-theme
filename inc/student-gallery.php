@@ -11,7 +11,7 @@
       <ul id="foo4" class="list-inline">
       <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <li>
-          <a href="<?php the_permalink() ?>"><img src="<?php echo getImgLink('image_gallery') ?>" alt="">
+          <a href="<?php echo get_page_link( 2746 ); ?>"><img src="<?php echo getImgLink('image_gallery') ?>" alt="">
             <h3 class="title">
               <?php the_title() ?> <small><?php echo getField('subtitle') ?></small>
             </h3></a>

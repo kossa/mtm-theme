@@ -13,10 +13,10 @@ $rand = GetPosts('artist', [
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h1>Save by purchasing all of Track C and be set for the school year with 35 weeks of instruction!</h1>
+                <h1>Save by purchasing all of <?php echo getTaxonomie('tracks') ?> and be set for the school year with 35 weeks of instruction!</h1>
             </div>
             <div class="col-sm-4">
-                <a href="#" class="learn-more">Learn More About Purchasing Tracks ›</a>
+                <a href="<?php echo get_page_link(2770); ?>" class="learn-more">Learn More About Purchasing Tracks ›</a>
             </div>
         </div>
         
