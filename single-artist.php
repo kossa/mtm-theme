@@ -59,8 +59,12 @@
           <div class="row">
             <div class="col-sm-4 text-center">
               <img src="<?php echo getImgLink('artist_cover_photo') ?>" alt="">
-              <a data-toggle="modal" data-target="#audio_modal" href="#" class="btn btn-link"><i class="fa fa-volume-up"></i> audio preview</a>
-
+              <?php $media = wp_get_attachment_url(getField('audio_preview_upload')) ?>
+              <?php if ($media): ?>
+                <a data-toggle="modal" data-target="#audio_modal" href="#" class="btn btn-link"><i class="fa fa-volume-up"></i> audio preview</a>
+              <?php else: ?>
+                <a href="#studentArtwork" class="btn btn-link">Student Gallery</a>
+              <?php endif ?>
               <div class="modal fade" id="audio_modal" tabindex="-1" role="dialog" aria-labelledby="audio_modalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -83,6 +87,8 @@
                 <li><a href="<?php echo getField('red_button_link') ?>" class="btn btn-danger btn-lg"><?php echo getField('red_button_text') ?></a></li>
                 <li><a href="<?php echo getField('blue_button_link') ?>" class="btn btn-primary btn-lg"><?php echo getField('blue_button_text') ?></a></li>
               </ul>
+
+              <?php echo getField('optional_text') ?>
             </div>
           </div>
 

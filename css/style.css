@@ -303,11 +303,17 @@ section.student-artwork header{overflow: hidden;margin-bottom: 30px;}
 section.student-artwork header h1{font-size: 28px;color: #177ed5;float: left;margin: 0;}
 section.student-artwork header a{float: right;}
 
-section.student-artwork #slide-artwork .item img{width: 100%;}
+section.student-artwork #slide-artwork .item img{  height: 620px; width: auto; max-width: inherit;}
 section.student-artwork #slide-artwork .big-img{  height: 470px; overflow: hidden;}
-section.student-artwork #slide-artwork .item p{text-align: right;}
 section.student-artwork .carousel-indicators{position: static;float: right;width: 100%;}
-section.student-artwork .carousel-indicators li{text-indent: 0;position: static;display: block;border: none;margin-bottom: 10px;width: 100%;height: auto;}
+section.student-artwork .carousel-indicators li{width: inherit;height: inherit;}
+section.student-artwork .carousel-indicators a{text-indent: 0;position: static;display: block;border: none;margin-bottom: 10px;width: 100px;height: 100px;overflow: hidden;}
+section.student-artwork #the-indicators > div{left: 0!important;}
+section.student-artwork #the-indicators > div.navigation{width: 100px;text-align: center; position: absolute; bottom: 0;  left: inherit!important;}
+section.student-artwork #the-indicators > div.navigation a{color: #1573C2;font-size: 25px;display: inline-block;margin: 0 3px;}
+section.student-artwork #the-indicators > div.navigation a:focus{color: #1573C2;}
+
+
 
 @media screen and (max-width: 1200px){
     section.all-artists li{width: 24%;}
@@ -354,7 +360,7 @@ section.student-artwork .carousel-indicators li{text-indent: 0;position: static;
     section#top-menu li{margin-left: 0;}
     section.navbar{margin-bottom: 0;}
     section.slider h2 {margin: 50px 0 10px; }
-    section.student-artwork .carousel-indicators li{width: auto; float: left;margin-right: 10px;}
+    section.student-artwork .carousel-indicators a{width: auto; float: left;margin-right: 10px;}
     section#top-menu{display: none;}
     section.top-ten{padding: 0 0 10px;}
     section.top-ten li{margin: 0 20px 10px;}
@@ -382,5 +388,4 @@ section.student-artwork .carousel-indicators li{text-indent: 0;position: static;
     section.all-artists li {width: 80%; }
     section.news-letter li{margin: 0 0 10px;}
 }
-
 

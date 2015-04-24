@@ -50,6 +50,31 @@
                 }
             }
         });
+
+        $('#student-artwork').carouFredSel({
+            responsive: true,
+            prev: '#prev3',
+            next: '#next3',
+            auto: false,
+            swipe: {
+                onMouse: true,
+                onTouch: true
+            },
+            scroll : {
+                items           : 1,
+                easing          : "elastic",
+                duration        : 1000,                         
+                pauseOnHover    : true
+            },
+            items: {
+                width: 100,
+            //  height: '30%',  //  optionally resize item-height
+                visible: {
+                    min: 1,
+                    max: 1
+                }
+            }
+        });
     }
 
     $('#audio_modal').on('show.bs.modal', function (e) {

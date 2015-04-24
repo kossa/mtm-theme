@@ -2,9 +2,10 @@
 
 $current_track = getTaxonomie('tracks'); // Get current track
 wp_reset_query();
+
 $rand = GetPosts('artist', [
-    'posts_per_page' => 20,
-    'orderby'        => 'rand',
+    'orderby'      => 'title',
+    'order'        => 'ASC',
     'post__not_in' => [THE_ID],
 ]) 
 
@@ -13,10 +14,11 @@ $rand = GetPosts('artist', [
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h1>Save by purchasing all of <?php echo getTaxonomie('tracks') ?> and be set for the school year with 35 weeks of instruction!</h1>
+                <!-- <h1>The below artists are part of <?php echo getTaxonomie('tracks') ?> . Save more on multiple artists and teach all year long.</h1> -->
+                <h1><?php echo str_replace('[track]', getTaxonomie('tracks'), getOption('artist_tracks_title'))  ?></h1>
             </div>
             <div class="col-sm-4">
-                <a href="<?php echo get_page_link(2770); ?>" class="learn-more">Learn More About Purchasing Tracks ›</a>
+                <a href="<?php echo get_page_link(2770); ?>" class="learn-more"><?php echo getOption('artist_all_tracks') ?></a>
             </div>
         </div>
         
@@ -36,7 +38,7 @@ $rand = GetPosts('artist', [
                 <!-- post navigation -->
                 <?php else: ?>
                 <!-- no posts found -->
-                <?php endif; ?> ?>
+                <?php endif; ?>
                 
             </ul>
             <div class="clearfix"></div>
