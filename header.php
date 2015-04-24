@@ -55,9 +55,9 @@
                 <li class="social"><a href="<?php echo getOption('pinterest_url') ?>"><i class="fa fa-pinterest-square"></i></a></li>
               <?php endif ?>
               <li>
-                <form class="search" action="#">
+                <form class="search" role="search" action="<?php echo bloginfo( 'url' ); ?>">
                   <input type="submit" name="" value="">
-                  <input type="search" placeholder="Search">
+                  <input type="search" name="s" placeholder="Search">
                 </form>
               </li>
             </ul>

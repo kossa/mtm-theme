@@ -12,6 +12,8 @@ img{max-width: 100%; height: auto;}
 iframe{max-width: 100%}
 .red{color: #ee3f3f;}
 p{font-size: 15px;}
+p:empty{display: none;}
+
 .p50-0{padding: 50px 0;}
 /*Headers*/
 h1,h2 {font-family: 'Permanent Marker', cursive;}
@@ -187,6 +189,12 @@ section.get-pricing div.yellow p{color: #333;}
 article#static-page{padding: 50px 20px;}
 article#static-page h1{color: #1573c2;font-size: 25px;margin: 0 0 30px;}
 article#static-page p{font-size: 16px;color: #000;padding-top: 10px;}
+
+/*static-page*/
+article#search-page{padding: 50px 20px;}
+article#search-page article{margin-bottom: 40px;}
+article#search-page h1{color: #1573c2;font-size: 25px; margin-bottom: 0;}
+article#search-page p{font-size: 16px;color: #000;padding-top: 10px;}
 
 
 /*selling-page*/
