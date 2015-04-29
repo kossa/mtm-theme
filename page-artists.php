@@ -124,6 +124,21 @@ $artists = GetPosts('artist', ['orderby' => 'last_name', 'order' => 'ASC']);
     
         $("#filter select").change(function(){
 
+            var _i = 0;
+            $("#filter select").each(function(){
+                if ($(this).val() == '') {
+                    _i++;
+                }else{
+                    return false
+                }
+            });
+
+            if (_i == $("#filter select").length) {
+                $('section.all-artists li').show();
+                return false;
+            };
+
+
             // Hide all
             $('section.all-artists li').hide();
 
