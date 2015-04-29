@@ -2,7 +2,9 @@
 
     $('.carousel').carousel({
       interval: 10000
-    })
+    });
+
+    $('[data-slide-to]').on('click', $.noop);
 
     window.onload = function(){
         $('#foo4').carouFredSel({
