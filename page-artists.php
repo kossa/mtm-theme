@@ -12,7 +12,8 @@ $medias    = getTaxonomieFilter( 'medias' );
 $heritages = getTaxonomieFilter( 'heritages' );
 $genders   = getTaxonomieFilter( 'genders' );
 
-$artists = GetPosts('artist', ['orderby' => 'last_name', 'order' => 'ASC']);
+$artists = GetPosts('artist', ['meta_key' => 'last_name','orderby' => 'meta_value', 'order' => 'ASC']);
+
 
  ?>
 
@@ -101,6 +102,7 @@ $artists = GetPosts('artist', ['orderby' => 'last_name', 'order' => 'ASC']);
                             data-heritage = "<?php echo strtolower(getTaxonomie('heritages')) ?>" 
                             data-gender   = "<?php echo strtolower(getTaxonomie('genders')) ?>" 
                         >
+
                             <a href="<?php the_permalink() ?>" class="one-artist">
                                 <img src="<?php echo getImgLink('artist_cover_photo') ?>" alt="">
                                 <h4><?php the_title(); ?></h4>

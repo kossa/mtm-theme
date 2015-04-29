@@ -4,8 +4,9 @@ $current_track = getTaxonomie('tracks'); // Get current track
 wp_reset_query();
 
 $rand = GetPosts('artist', [
-    'orderby'      => 'last_name',
-    'order'        => 'ASC',
+    'meta_key' => 'last_name',
+    'orderby' => 'meta_value', 
+    'order' => 'ASC',
     'post__not_in' => [THE_ID],
 ]) 
 
