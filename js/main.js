@@ -1,10 +1,12 @@
+
 (function($){
 
     $('.carousel').carousel({
       interval: 10000
     });
 
-    $('[data-slide-to]').on('click', $.noop);
+    // $('[data-slide-to]').on('click', $.noop);
+
 
     window.onload = function(){
         $('#foo4').carouFredSel({
@@ -92,5 +94,18 @@
     if (!nb) {
         $("section.submenu.widget_nav_menu").hide();
     };
+
+    $(".carousel-inner").swipe( {
+        //Generic swipe handler for all directions
+        swipeLeft:function(event, direction, distance, duration, fingerCount) {
+            $(this).parent().carousel('next'); 
+        },
+        swipeRight: function() {
+            $(this).parent().carousel('prev'); 
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold:0
+    });
+
 
 })(jQuery);

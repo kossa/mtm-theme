@@ -24,7 +24,9 @@ h1,h2 {font-family: 'Permanent Marker', cursive;}
 .p20{padding: 20px;}
 .p30{padding: 30px;}
 .p40{padding: 40px;}
-
+[data-slide-to] {
+    cursor: pointer;
+}
 
 /*BTN*/
 .btn{max-width: 100%;word-wrap: break-word;border: none;padding: 7px 18px;text-transform: uppercase;color: #fff;font-weight: bold;font-family: 'Permanent Marker', cursive;border-radius: 20px}
@@ -353,6 +355,7 @@ section.student-artwork #the-indicators > div.navigation a:focus{color: #1573C2;
     #selling-page .steps{margin-top: 0;}
     #selling-page section.banner{margin-bottom: -20px;}
     section.all-artists li {width: 33%; }
+    #the-indicators{display: none!important;}
 }
 @media screen and (max-width: 767px){
     #artists-page #filter li{width: 32%;margin-bottom: 10px;}
